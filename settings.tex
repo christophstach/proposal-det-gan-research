@@ -1,0 +1,30 @@
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{algorithmic}
+\usepackage{array}
+
+\ifCLASSOPTIONcompsoc
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+\usepackage{dblfloatfix}
+
+\ifCLASSOPTIONcaptionsoff
+  \usepackage[nomarkers]{endfloat}
+\let\MYoriglatexcaption\caption
+  \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
+\fi
+
+\usepackage{url}
+\usepackage{csquotes}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\usepackage[style=ieee]{biblatex}
+\addbibresource{references/papers.bib}
