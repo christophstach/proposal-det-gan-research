@@ -43,16 +43,12 @@ https://github.com/bchao1/Anime-Face-Dataset
 \section{Procedure}
 
 \noindent
-The first step is to develop a MSG-GAN \cite{karnewar2020msggan} architecture, which builds up on the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the layers of the generator and the discriminator. Secondly the gradient penalty and the WGAN loss needs to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss will be created. Finally the GAN is tested and evaluated with different datasets and normalization methods between the layers.
+The first step is to develop a MSG-GAN \cite{karnewar2020msggan} architecture, which builds upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the layers of the generator and the discriminator. Secondly the gradient penalty and the WGAN-Loss need to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss will be created. Finally the GAN is tested and evaluated with different datasets and normalization methods between the layers.
 
 \section{Requirements and constraints}
 
-\blindtext
-
-\section{Timetable}
-
 \noindent
-\blindtext \cite{yazıcı2019unusual}
+As GANs are difficult to train and training on large Image requires a lot of computing power and time, the image size will be constrained to 128x128 pixels per image.
 
 \section{Expected Results}
 
@@ -66,18 +62,30 @@ The first step is to develop a MSG-GAN \cite{karnewar2020msggan} architecture, w
 \begin{enumerate}
   \item Abstract
   \item Introduction
-  \item Basics \cite{goodfellow2014generative}
-  \item Technologies
+  \item Basics
   \begin{enumerate}
-    \item WGAN-GP \cite{arjovsky2017wasserstein,gulrajani2017improved}
-    \item MSG-GAN \cite{karnewar2020msggan}
-    \item Adam \cite{kingma2017adam}
+    \item Convulional Networks 
+    \item Generative Adversarial Networks \cite{goodfellow2014generative}
+    \item Wasserstein GAN \cite{arjovsky2017wasserstein}
+    \item Optimization Algorithms for Gradient Descent (eg. Adam \cite{kingma2017adam})
+  \end{enumerate}
+  \item Network Architecture
+  \begin{enumerate}
+    \item Multi Scale Gradients \cite{karnewar2020msggan}
+    \item Gradient Penalty \cite{arjovsky2017wasserstein,gulrajani2017improved}
     \item Relatavitic Discriminator Loss \cite{jolicoeurmartineau2018relativistic}
     \item Exponential Moving Average \cite{yazıcı2019unusual}
     \item Spectral Normalization \cite{miyato2018spectral}
   \end{enumerate}
   \item Implementation
   \item Evaluation
+  \begin{enumerate}
+    \item Inception Score \cite{salimans2016improved} (https://medium.com/octavian-ai/a-simple-explanation-of-the-inception-score-372dff6a8c7a)
+    \item Fréchet Inception Distance \cite{heusel2018gans}
+    \item Sitenote (Unbiased Version \cite{chong2020effectively})
+    \item Used Metric
+  \end{enumerate}
+  \item Results
   \item Conclusion and future applications
 \end{enumerate}
 
