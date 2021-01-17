@@ -17,12 +17,18 @@
 }
 \maketitle
 
-% As a general rule, do not put math, special symbols, or citations
+% As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
 
 \noindent
-The research project in the field of computer science will be about image generation with Generative Adversarial Networks. The goal is to examine GANs and explore their capability of generating new unseen images of arbitrary datasets. In this project, especially photorealistic images are used, but the proposed application can also generate images of a different format. Generative Adversarial Networks is a research area of deep learning, Where two (or more) Neural Networks are competing. In a standard GAN architecture, a Generator generates images from a random number vector. A discriminator decides if the image comes from the Generator or the true Dataset. The Generator continuously tries to fool the Discriminator and therefore creates Images of increasing quality.
+The research project in the field of computer science will be about image generation with Generative Adversarial
+Networks. The goal is to examine GANs and explore their capability of generating new unseen images of arbitrary
+datasets. In this project, especially photorealistic images are used, but the proposed application can also generate
+images of a different format. Generative Adversarial Networks is a research area of deep learning, Where two (or more)
+Neural Networks are competing. In a standard GAN architecture, a Generator generates images from a random number
+vector. A discriminator decides if the image comes from the Generator or the true Dataset. The Generator continuously
+tries to fool the Discriminator and therefore creates Images of increasing quality.
 
 \end{abstract}
 
@@ -30,12 +36,20 @@ The research project in the field of computer science will be about image genera
 \section{Motivation}
 
 \noindent
-The first GANs implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN \cite{radford2016unsupervised} used Convulional layers better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an interesting research area, which highly motivates them to explore them.
+The first GANs implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up
+projects, like DCGAN \cite{radford2016unsupervised} used Convulional layers better suited for computer vision and
+image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often
+suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For
+these reasons, GANs are an interesting research area, which highly motivates them to explore them.
+
 
 \section{Objective}
 
 \noindent
-The project's goal is to get more familiar with Generative Adversarial Networks, their functionalities, features, and their pitfalls and problems. Only by understanding GANs better, it is possible to improve them in future projects.
+The project's goal is to get more familiar with Generative Adversarial 
+Networks, their functionalities, features, and their pitfalls and problems. 
+Only by understanding GANs better, it is possible to improve them in future 
+projects.
 
 https://github.com/bchao1/Anime-Face-Dataset
 
@@ -43,12 +57,22 @@ https://github.com/bchao1/Anime-Face-Dataset
 \section{Procedure}
 
 \noindent
-The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture built upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the layers of the generator and the discriminator. Secondly, the gradient penalty and the WGAN loss needs to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss will be created. Finally, the GAN is tested and evaluated with different datasets and normalization methods between the layers.
+The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture 
+built upon the DCGAN \cite{radford2016unsupervised} architecture but with 
+additional skip-connections between the layers of the generator and the 
+discriminator. Secondly, the gradient penalty and the WGAN loss needs to be 
+implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss 
+will be created. Finally, the GAN is tested and evaluated with different
+datasets and normalization methods between the layers.
 
 \section{Requirements and constraints}
 
+\blindtext
+
+\section{Timetable}
+
 \noindent
-As GANs are difficult to train and training on large Image requires a lot of computing power and time, the image size will be constrained to 128x128 pixels per image.
+\blindtext \cite{yazıcı2019unusual}
 
 \section{Expected Results}
 
@@ -62,30 +86,18 @@ As GANs are difficult to train and training on large Image requires a lot of com
 \begin{enumerate}
   \item Abstract
   \item Introduction
-  \item Basics
+  \item Basics \cite{goodfellow2014generative}
+  \item Technologies
   \begin{enumerate}
-    \item Convulional Networks 
-    \item Generative Adversarial Networks \cite{goodfellow2014generative}
-    \item Wasserstein GAN \cite{arjovsky2017wasserstein}
-    \item Optimization Algorithms for Gradient Descent (eg. Adam \cite{kingma2017adam})
-  \end{enumerate}
-  \item Network Architecture
-  \begin{enumerate}
-    \item Multi Scale Gradients \cite{karnewar2020msggan}
-    \item Gradient Penalty \cite{arjovsky2017wasserstein,gulrajani2017improved}
+    \item WGAN-GP \cite{arjovsky2017wasserstein,gulrajani2017improved}
+    \item MSG-GAN \cite{karnewar2020msggan}
+    \item Adam \cite{kingma2017adam}
     \item Relatavitic Discriminator Loss \cite{jolicoeurmartineau2018relativistic}
     \item Exponential Moving Average \cite{yazıcı2019unusual}
     \item Spectral Normalization \cite{miyato2018spectral}
   \end{enumerate}
   \item Implementation
   \item Evaluation
-  \begin{enumerate}
-    \item Inception Score \cite{salimans2016improved} (https://medium.com/octavian-ai/a-simple-explanation-of-the-inception-score-372dff6a8c7a)
-    \item Fréchet Inception Distance \cite{heusel2018gans}
-    \item Sitenote (Unbiased Version \cite{chong2020effectively})
-    \item Used Metric (VGGFace2) \cite{cao2018vggface2}
-  \end{enumerate}
-  \item Results
   \item Conclusion and future applications
 \end{enumerate}
 
