@@ -22,7 +22,7 @@
 \begin{abstract}
 
 \noindent
-The research project in the field of computer science will be about image generation with Generative Adversarial Networks. The goal is to examine GANs and explores their capability of generating new, unseen images of arbitrary datasets. In this project especially foto realistic images are used but the proposed application is also able to generate images of a different format. Generative Adversarial Networks is a research area of deep learning, Where two (or more) Neural Networks are competing with each other. In a standard GAN architecture, a Generator generates images from a random number vector. A discriminator is deciding if the image comes from the Generator or the true Dataset. The Generator continuously tries to fool the Discriminator and therefore creates Images of increasing quality.
+The research project in the field of computer science will be about image generation with Generative Adversarial Networks. The goal is to examine GANs and explore their capability of generating new unseen images of arbitrary datasets. In this project, especially photorealistic images are used, but the proposed application can also generate images of a different format. Generative Adversarial Networks is a research area of deep learning, Where two (or more) Neural Networks are competing. In a standard GAN architecture, a Generator generates images from a random number vector. A discriminator decides if the image comes from the Generator or the true Dataset. The Generator continuously tries to fool the Discriminator and therefore creates Images of increasing quality.
 
 \end{abstract}
 
@@ -30,12 +30,12 @@ The research project in the field of computer science will be about image genera
 \section{Motivation}
 
 \noindent
-The first GANs implementations used Dense layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN \cite{radford2016unsupervised} used Convulional layers, which are better suited for computer vision and image tasks. Still, it was very hard to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an interesting research area, which highly motivates them to explore them.
+The first GANs implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN \cite{radford2016unsupervised} used Convulional layers better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an interesting research area, which highly motivates them to explore them.
 
 \section{Objective}
 
 \noindent
-The goal of the project is to get more familiar with Generative Adversarial Networks, its functionalities, features but also its pitfalls and problems. Only by understanding GANs better, it is possible to improve them in future projects.
+The project's goal is to get more familiar with Generative Adversarial Networks, their functionalities, features, and their pitfalls and problems. Only by understanding GANs better, it is possible to improve them in future projects.
 
 https://github.com/bchao1/Anime-Face-Dataset
 
@@ -43,7 +43,7 @@ https://github.com/bchao1/Anime-Face-Dataset
 \section{Procedure}
 
 \noindent
-The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture, which builds upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the layers of the generator and the discriminator. Secondly, the gradient penalty and the WGAN-Loss need to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss will be created. Finally, the GAN is tested and evaluated with different datasets and normalization methods between the layers.
+The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture built upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the layers of the generator and the discriminator. Secondly, the gradient penalty and the WGAN loss needs to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss will be created. Finally, the GAN is tested and evaluated with different datasets and normalization methods between the layers.
 
 \section{Requirements and constraints}
 
