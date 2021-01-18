@@ -31,7 +31,7 @@
         "commands": [
             {
                 "name": "Build LaTeX",
-                "color": "#8f3200",
+                "color": "#000000",
                 "command": "latexmk -pvc -pdf -shell-escape main.tex",
                 "singleInstance": true,
             },
