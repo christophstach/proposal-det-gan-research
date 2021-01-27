@@ -51,4 +51,23 @@
         "**/.spellignore",
     ],
     "spellright.recheckOnSave": true,
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/main.tex"
+            ],
+            "config": {
+                "audience": "knowledgeable",
+                "dialect": "american",
+                "domain": "academic",
+                "emotions": [
+                    "analytical"
+                ],
+                "goals": [
+                    "inform",
+                    "describe"
+                ]
+            }
+        }
+    ],
 }
