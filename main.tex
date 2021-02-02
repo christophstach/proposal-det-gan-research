@@ -22,7 +22,7 @@
 \begin{abstract}
 
 \noindent
-The research project in the field of computer science will be about image generation with Generative Adversarial Networks. The goal is to examine GANs and explore their capability of generating new unseen images of arbitrary datasets. This project, especially photorealistic images, is used, but the proposed application can also generate a different format. Generative Adversarial Networks is a research area of deep learning, Where two (or more)Neural Networks are competing. In a standard GAN architecture, a Generator generates images from a random number vector. A discriminator decides if the image comes from the Generator or the true Dataset. The Generator continuously tries to fool the Discriminator and therefore creates Images of increasing quality.
+The research project in the field of computer science will be about image generation with Generative Adversarial Networks. The goal is to examine GANs and explore their capability of generating new unseen images of arbitrary datasets. This project, especially photorealistic images, are used, but the proposed application can also generate a different format. Generative Adversarial Networks is a research area of deep learning, where two (or more) Neural Networks are competing. In a standard GAN architecture, a Generator generates images from a random number vector. A discriminator decides if the image comes from the Generator or the real Dataset. The Generator continuously tries to fool the Discriminator and therefore creates images of increasing quality.
 
 \end{abstract}
 
@@ -30,38 +30,32 @@ The research project in the field of computer science will be about image genera
 \section{Motivation}
 
 \noindent
-The first GANs implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN, \cite{radford2016unsupervised} used Convulional layers better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an exciting research area, which highly motivates them to explore them.
+The first GAN implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN, \cite{radford2016unsupervised} used Convulional layers better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an exciting research area, which highly motivates to explore them.
 
 
 \section{Objective}
 
 \noindent
-The project's goal is to get more familiar with Generative Adversarial. Networks, their functionalities, features, and their pitfalls and problems. Only by understanding GANs better, it is possible to improve them in future projects.
-
-https://github.com/bchao1/Anime-Face-Dataset
-
+The project aims to familiarize the author with Generative Adversarial Networks, their functionalities, features, pitfalls, and problems. Only by understanding GANs better it is possible to improve them in future projects.
 
 \section{Procedure}
 
 \noindent
-The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture built upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the generator and the discriminator layers. Secondly, the gradient penalty and the WGAN loss needs to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss will be created. Finally, the GAN is tested and evaluated with different datasets and normalization methods between the layers.
+The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture built upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the generator and the discriminator layers. Secondly, the WGAN loss \cite{arjovsky2017wasserstein} and gradient penalty \cite{gulrajani2017improved} need to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss \cite{jolicoeurmartineau2018relativistic} will be created. Finally, the GAN will be tested and evaluated with different datasets and normalization methods between the layers.
 
 \section{Requirements and constraints}
 
-\blindtext
-
-\section{Timetable}
-
 \noindent
-\blindtext \cite{yazıcı2019unusual}
+As GANs need a lot of computing power and time to train, only images of 128x128 pixels will be generated in this project. The requirement is that the GAN architecture is implemented in PyTorch \cite{paszke2019pytorch} and trained with the \url{determined.ai} framework.
 
 \section{Expected Results}
 
 \noindent
-\blindtext
+The proposed GAN will generate images of photorealistic quality. However, the author expects that not all images will be indistinguishable from real images. There will be images with generation artifacts, which clearly show that a GAN architecture generated it. Also, interpolations between images are not expected to deliver good results.
 
+\newpage
 
-\section{Preliminary  Structure}
+\section{Preliminary Structure}
 
 \noindent
 \begin{enumerate}
@@ -73,7 +67,7 @@ The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture b
     \item WGAN-GP \cite{arjovsky2017wasserstein,gulrajani2017improved}
     \item MSG-GAN \cite{karnewar2020msggan}
     \item Adam \cite{kingma2017adam}
-    \item Relatavitic Discriminator Loss \cite{jolicoeurmartineau2018relativistic}
+    \item Relativistic Discriminator Loss \cite{jolicoeurmartineau2018relativistic}
     \item Exponential Moving Average \cite{yazıcı2019unusual}
     \item Spectral Normalization \cite{miyato2018spectral}
   \end{enumerate}
@@ -81,10 +75,6 @@ The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture b
   \item Evaluation
   \item Conclusion and future applications
 \end{enumerate}
-
-
-\newpage
-
 
 \printbibliography
 
