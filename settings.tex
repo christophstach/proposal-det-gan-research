@@ -1,4 +1,7 @@
 
+\usepackage[onehalfspacing]{setspace}
+\usepackage[stretch=10]{microtype}
+
 \usepackage[pdftex]{graphicx}
 
 \usepackage{amsmath}
@@ -6,19 +9,10 @@
 \usepackage{algorithmic}
 \usepackage{array}
 
-\ifCLASSOPTIONcompsoc
-  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-\else
-  \usepackage[caption=false,font=footnotesize]{subfig}
-\fi
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
 
 \usepackage{dblfloatfix}
-
-\ifCLASSOPTIONcaptionsoff
-  \usepackage[nomarkers]{endfloat}
-\let\MYoriglatexcaption\caption
-  \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
-\fi
+\usepackage[nomarkers]{endfloat}
 
 \usepackage{url}
 \usepackage{hyperref}

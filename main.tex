@@ -1,19 +1,18 @@
-\documentclass[conference,onecolumn,compsoc]{IEEEtran}
+%\documentclass[conference,onecolumn,compsoc]{IEEEtran}
+\documentclass[]{article}
 
 \input{settings}
 
 \begin{document}
 
 
-\title{Proposal: Image Generation with GANs}
+\title{\textbf{Proposal: Image Generation with GANs}}
 
 \author{
-  \IEEEauthorblockN{Christoph Stach}
-  \IEEEauthorblockA{
-    Hochschule für Technik und Wirtschaft Berlin\\
-    Fachbereich 4 - Angewandte Informatik\\
-    s0555912@htw-berlin.de
-  }
+  Christoph Stach\\
+  Hochschule für Technik und Wirtschaft Berlin\\
+  Fachbereich 4 - Angewandte Informatik\\
+  s0555912@htw-berlin.de
 }
 \maketitle
 
@@ -30,18 +29,18 @@ The research project in the field of computer science will be about image genera
 \section{Motivation}
 
 \noindent
-The first GAN implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN, \cite{radford2016unsupervised} used Convulional layers better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an exciting research area, which highly motivates to explore them.
+The first GAN implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN, \cite{radford2016unsupervised} used Convolutional layers, which are better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of large size and sufficient computing power. For these reasons, GANs are an exciting research area, which highly motivates to explore them.
 
 
 \section{Objective}
 
 \noindent
-The project aims to familiarize the author with Generative Adversarial Networks, their functionalities, features, pitfalls, and problems. Only by understanding GANs better it is possible to improve them in future projects.
+The project aims to familiarize the author with Generative Adversarial Networks, their functionalities, features, pitfalls, and problems. Previous work demonstrates that GANs are well suited for image generation tasks. They provide a solid and strong framework to generate new images in an unsupervised/semi-supervised manner. The project should result in an application that is in the best case capable of generating newly, unseen images, which are indistinguishable from real images from a chosen dataset.
 
 \section{Procedure}
 
 \noindent
-The first step is to develop an MSG-GAN \cite{karnewar2020msggan} architecture built upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the generator and the discriminator layers. Secondly, the WGAN loss \cite{arjovsky2017wasserstein} and gradient penalty \cite{gulrajani2017improved} need to be implemented. For further testing also the RaHinge-Loss and the RaLSGAN-Loss \cite{jolicoeurmartineau2018relativistic} will be created. Finally, the GAN will be tested and evaluated with different datasets and normalization methods between the layers.
+The first step is to develop a GAN architecture. MSG-GAN \cite{karnewar2020msggan}, built upon the DCGAN \cite{radford2016unsupervised} architecture but with additional skip-connections between the generator and the discriminator layers is a possible candidate. Secondly, a suitable loss function must be used. The WGAN loss, combined \cite{arjovsky2017wasserstein} with a gradient penalty \cite{gulrajani2017improved}, has shown good results in former projects. For further testing also the RaHinge-Loss and the RaLSGAN-Loss \cite{jolicoeurmartineau2018relativistic} can be used. Finally, the GAN will be tested and evaluated with different datasets and normalization methods between the layers.
 
 \section{Requirements and constraints}
 
