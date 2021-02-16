@@ -1,0 +1,90 @@
+%\documentclass[conference,onecolumn,compsoc]{IEEEtran}
+\documentclass[]{article}
+
+\input{settings}
+
+\begin{document}
+
+
+\title{\textbf{Exposé: Implemetation of a GAN-Architecture}}
+
+\author{
+  Christoph Stach\\
+  Hochschule für Technik und Wirtschaft Berlin\\
+  Fachbereich 4 - Angewandte Informatik\\
+  s0555912@htw-berlin.de
+}
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+
+\noindent
+The research project in the field of computer science will be about image generation with Generative Adversarial Networks. The goal is to examine GANs and explore their capability of generating new unseen images of arbitrary datasets. This project uses photorealistic paintings, but the proposed application can also create a different format. Generative Adversarial Networks is a research area of deep learning, where two (or more) Neural Networks are competing. In a standard GAN architecture, a Generator generates images from a random number vector. A discriminator decides if the image comes from the Generator or the real Dataset. The Generator continuously tries to fool the Discriminator and therefore creates images of increasing quality.
+
+\end{abstract}
+
+
+\section{Motivation}
+
+\noindent
+Early GAN implementations used Dense-layers to generate new data \cite{goodfellow2014generative}. Follow-up projects, like DCGAN \cite{radford2016dcgan} used Convolutional-layers, which are better suited for computer vision and image tasks. Still, it was tough to train networks with the capability of generating larger images. Training often suffers from problems like Mode-Collapse. GANs require datasets of vast size and sufficient computing power. For these reasons, the research area of GANs is interesting to explore.
+
+\section{Objective}
+
+\noindent
+This project aims to develop a GAN-architecture capable of generating new, unseen images of a small size. The model should be fed with a vector of random noise, drawn from a normal distribution, and convert to an RGB-image that could come from a chosen dataset. The objective is to find considerable architecture, loss function, and hyperparameter configuration, achieving this task.
+
+\section{Requirements and constraints}
+
+\noindent
+As GANs need a lot of computing power and time to train, only images of 128x128 pixels will be generated in this project. The requirement is that the GAN architecture is implemented in PyTorch \cite{paszke2019pytorch} and trained with the \url{determined.ai} framework.
+
+\section{Procedure}
+
+\noindent
+In the beginning, relevant literature will be reviewed and explained. The techniques of the chosen literature will be used to develop a GAN-model. The architecture will base on one of the early adoptions of GANs, like DCGAN. As the Wasserstein GAN \cite{arjovsky2017wgan} loss-function has shown remarkable results in image generation, a variant will train the framework. The GAN will be evaluated on different datasets and hyperparameter configurations. A conclusion will be drawn, and possible improvements and future work will be explained.
+
+\section{Expected Results}
+
+\noindent
+The proposed GAN will generate new, unseen images. However, the author expects that not all images will be indistinguishable from real images. There will be images with generation artifacts, which clearly show that a GAN architecture generated it.
+
+
+
+\newpage
+
+\section{Preliminary Structure}
+
+\noindent
+\begin{enumerate}
+  \item Abstract
+  \item Introduction
+  \item Objective
+  \item Fundanmentals
+  \begin{enumerate}
+      \item GAN \cite{goodfellow2014generative}
+      \item DCGAN \cite{radford2016dcgan}
+      \item WGAN \cite{arjovsky2017wgan, gulrajani2017wgangp}
+  \end{enumerate}
+  \item Methodology
+  \begin{enumerate}
+    \item Technologies
+    \begin{enumerate}
+        \item PyTorch \cite{paszke2019pytorch}
+        \item determined.ai
+    \end{enumerate}
+    \item Datasets
+    \item Implementation
+    \item Evaluation
+  \end{enumerate}
+  \item Conclusion
+  \item Future work and improvements
+\end{enumerate}
+
+\newpage
+
+\printbibliography
+
+\end{document}
